@@ -6,7 +6,8 @@
   "scripts": {
     "prestart": "node scripts/create-database.js",
     "start": "nodemon -r dotenv/config index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node scripts/create-database.js test",
+    "posttest": "node scripts/drop-database.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,13 @@
   },
   "homepage": "https://github.com/mariocooper/music-library#readme",
   "devDependencies": {
+    "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "eslint": "^8.34.0",
     "eslint-plugin-react": "^7.32.2",
-    "nodemon": "^2.0.20"
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "express": "^4.18.2",

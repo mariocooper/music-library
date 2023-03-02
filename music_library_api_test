@@ -1,0 +1,6 @@
+PGUSER=postgres
+ PGHOST=localhost
+ PGPASSWORD=password
+ music_library_test=music_library_dev
+ PGPORT=5432
+ PORT=3000
