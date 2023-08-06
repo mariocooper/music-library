@@ -14,4 +14,6 @@ router.get("/:id", artistController.getArtistById);
 
 router.put("/:id", artistUpdateController.putArtist);
 
+router.patch("/:id", artistUpdateController.patchArtist);
+
 module.exports = router;
