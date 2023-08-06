@@ -26,8 +26,8 @@ exports.getAllArtists = async (_, res) => {
 };
 
 exports.getArtistById = async (req, res) => {
+  const { id } = req.params;
   try {
-    const { id } = req.params;
     const {
       rows: [artist],
     } = await db.query("SELECT * FROM Artists WHERE id = $1", [id]);
